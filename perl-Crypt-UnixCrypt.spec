@@ -26,7 +26,7 @@ Crypt::UnixCrypt - implementacja funkcji crypt(3) wy³±cznie w Perlu.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
