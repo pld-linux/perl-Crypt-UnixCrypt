@@ -1,12 +1,13 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Crypt
 %define	pnam	UnixCrypt
-Summary:	Crypt::UnixCrypt perl module
-Summary(pl):	Modu³ perla Crypt::UnixCrypt
+Summary:	Crypt::UnixCrypt - Perl-only implementation of the "crypt" function
+Summary(pl):	Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
 Name:		perl-Crypt-UnixCrypt
 Version:	1.0
 Release:	3
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ff007b7fdda2aa626acaca216750c422
@@ -16,10 +17,16 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt::UnixCrypt - perl-only implementation of the crypt(3) function.
+Crypt::UnixCrypt module is for all those poor souls whose perl port
+answers to the use of "crypt()" with the message `The crypt() function
+is unimplemented due to excessive paranoia.'.
 
 %description -l pl
-Crypt::UnixCrypt - implementacja funkcji crypt(3) wy³±cznie w Perlu.
+Modu³ Crypt::UnixCrypt jest przeznaczony dla tych biednych dusz,
+którym u¿ywana implementacja Perla na próbê u¿ycia "crypt()" odpowiada
+komunikatem: `The crypt() function is unimplemented due to excessive
+paranoia.' [Funkcja crypt() nie zosta³a zaimplementowana z powodu
+nadmiernej paranoi.]
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
