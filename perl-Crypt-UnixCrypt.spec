@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Crypt
-%define	pnam	UnixCrypt
+%define		pdir	Crypt
+%define		pnam	UnixCrypt
 Summary:	Crypt::UnixCrypt - Perl-only implementation of the "crypt" function
 Summary(pl):	Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
 Name:		perl-Crypt-UnixCrypt
