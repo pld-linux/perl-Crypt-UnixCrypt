@@ -1,43 +1,44 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Crypt
-%define	pnam	DES
-Summary:	Crypt-DES perl module
-Summary(pl):	Modu³ perla Crypt-DES
-Name:		perl-Crypt-DES
-Version:	2.03
+%define	pnam	UnixCrypt
+Summary:	Crypt::UnixCrypt perl module
+Summary(pl):	Modu³ perla Crypt::UnixCrypt
+Name:		perl-Crypt-UnixCrypt
+Version:	1.0
 Release:	1
-License:	distributable
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt-DES - Perl interface to DES block cipher.
+Crypt::UnixCrypt - perl-only implementation of the crypt(3) function.
 
 %description -l pl
-Crypt-DES - modu³ wspomagaj±cy algorytm DES.
+Crypt::UnixCrypt - implementacja funkcji crypt(3) wy³±cznie w Perlu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+gzip -9nf CHANGES README
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_sitearch}/Crypt/DES.pm
-%dir %{perl_sitearch}/auto/Crypt/DES
-%{perl_sitearch}/auto/Crypt/DES/DES.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Crypt/DES/DES.so
+%doc *.gz
+%{perl_sitelib}/Crypt/UnixCrypt.pm
 %{_mandir}/man3/*
