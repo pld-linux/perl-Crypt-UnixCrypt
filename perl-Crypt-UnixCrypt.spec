@@ -5,11 +5,11 @@ Summary:	Crypt::UnixCrypt perl module
 Summary(pl):	Modu³ perla Crypt::UnixCrypt
 Name:		perl-Crypt-UnixCrypt
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,8 @@ Crypt::UnixCrypt - implementacja funkcji crypt(3) wy³±cznie w Perlu.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -38,5 +39,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README
-%{perl_sitelib}/Crypt/UnixCrypt.pm
+%{perl_vendorlib}/Crypt/UnixCrypt.pm
 %{_mandir}/man3/*
