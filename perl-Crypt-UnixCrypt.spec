@@ -5,8 +5,8 @@ Summary:	Crypt::UnixCrypt perl module
 Summary(pl):	Modu³ perla Crypt::UnixCrypt
 Name:		perl-Crypt-UnixCrypt
 Version:	1.0
-Release:	1
-License:	GPL or Artistic
+Release:	2
+License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
@@ -32,13 +32,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf CHANGES README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES README
 %{perl_sitelib}/Crypt/UnixCrypt.pm
 %{_mandir}/man3/*
