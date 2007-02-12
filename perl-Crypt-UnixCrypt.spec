@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	UnixCrypt
 Summary:	Crypt::UnixCrypt - Perl-only implementation of the "crypt" function
-Summary(pl):	Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
+Summary(pl.UTF-8):   Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
 Name:		perl-Crypt-UnixCrypt
 Version:	1.0
 Release:	4
@@ -25,11 +25,11 @@ Crypt::UnixCrypt module is for all those poor souls whose perl port
 answers to the use of "crypt()" with the message `The crypt() function
 is unimplemented due to excessive paranoia.'.
 
-%description -l pl
-Modu≥ Crypt::UnixCrypt jest przeznaczony dla tych biednych dusz,
-ktÛrym uøywana implementacja Perla na prÛbÍ uøycia "crypt()" odpowiada
+%description -l pl.UTF-8
+Modu≈Ç Crypt::UnixCrypt jest przeznaczony dla tych biednych dusz,
+kt√≥rym u≈ºywana implementacja Perla na pr√≥bƒô u≈ºycia "crypt()" odpowiada
 komunikatem: `The crypt() function is unimplemented due to excessive
-paranoia.' [Funkcja crypt() nie zosta≥a zaimplementowana z powodu
+paranoia.' [Funkcja crypt() nie zosta≈Ça zaimplementowana z powodu
 nadmiernej paranoi.]
 
 %prep
