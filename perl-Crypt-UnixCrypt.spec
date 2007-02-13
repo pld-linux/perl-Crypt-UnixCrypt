@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	UnixCrypt
 Summary:	Crypt::UnixCrypt - Perl-only implementation of the "crypt" function
-Summary(pl.UTF-8):   Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
+Summary(pl.UTF-8):	Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
 Name:		perl-Crypt-UnixCrypt
 Version:	1.0
 Release:	4
