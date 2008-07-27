@@ -9,7 +9,7 @@ Summary:	Crypt::UnixCrypt - Perl-only implementation of the "crypt" function
 Summary(pl.UTF-8):	Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
 Name:		perl-Crypt-UnixCrypt
 Version:	1.0
-Release:	4
+Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
