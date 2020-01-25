@@ -4,7 +4,6 @@
 
 %define		pdir	Crypt
 %define		pnam	UnixCrypt
-%include	/usr/lib/rpm/macros.perl
 Summary:	Crypt::UnixCrypt - Perl-only implementation of the "crypt" function
 Summary(pl.UTF-8):	Crypt::UnixCrypt - czysto perlowa implementacja funkcji "crypt"
 Name:		perl-Crypt-UnixCrypt
